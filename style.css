@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+	list-style: none;
+	text-decoration: none;
+	outline-style: none;
+	outline: none;
+	border: none;
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	width: 17em;
+	height: 23em;
+	z-index: 0;
+	position: relative;
+}
+.container .card{
+    outline: 1px solid black;
+    border: 2px solid white;
+    border-radius: 10px;
+
+
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-inline: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.container a {
+	width: 50%;
+	height: 50%;
+	z-index: 100;
+	position: absolute;
+}
+/*  */
+.container a:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+.container a:nth-child(2) {
+	top: 0;
+	right: 0;
+}
+.container a:nth-child(3) {
+	left: 0;
+	bottom: 0;
+}
+.container a:nth-child(4) {
+	right: 0;
+	bottom: 0;
+}
+/*  */
+.container a:nth-child(1):hover ~ .card,
+.container a:nth-child(1):focus ~ .card {
+  transform: rotateX(10deg) rotateY(-10deg);
+  box-shadow: 10px 20px black;
+}
+.container a:nth-child(2):hover ~ .card,
+.container a:nth-child(2):focus ~ .card {
+  transform: rotateX(10deg) rotateY(10deg);
+  box-shadow: -10px 20px black;
+}
+.container a:nth-child(3):hover ~ .card,
+.container a:nth-child(3):focus ~ .card {
+  transform: rotateX(-10deg) rotateY(-10deg);
+  box-shadow: 10px -20px black;
+}
+.container a:nth-child(4):hover ~ .card,
+.container a:nth-child(4):focus ~ .card {
+  transform: rotateX(-10deg) rotateY(10deg);
+  box-shadow: -10px -20px black;
+}
+/*  */
+.image{
+    background-color: black;
+    width: 7em;
+    height: 7em;
+    border-radius: 15px;
+}
+.about{
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.text-about{
+    text-align: center;
+    line-height: 15px;
+    font-size: 0.7em;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    height: 130px;
+}
+.social{
+    background-color: black;
+    width: 110%;
+    height: 50px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
